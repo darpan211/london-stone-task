@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dynamic Filter with Colors and Tones</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="category">
+                <div class="filters">
+                    <h3>Colour & Tone</h3>
+                    <div class="color-options" id="color-options"></div>
+                    <div class="tone-filters">
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="tone-checkbox"
+                                data-tone="Medium"
+                            />
+                            <span class="checkbox-tone">Medium</span>
+                            <span class="tone-filter-count">
+                                (<span class="tone-count" data-tone="Medium"
+                                    >0</span
+                                >)
+                            </span>
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="tone-checkbox"
+                                data-tone="Dark"
+                            />
+                            <span class="checkbox-tone">Dark</span>
+                            <span class="tone-filter-count">
+                                (<span class="tone-count" data-tone="Dark"
+                                    >0</span
+                                >)
+                            </span>
+                        </label>
+                        <label>
+                            <input
+                                type="checkbox"
+                                class="tone-checkbox"
+                                data-tone="Light"
+                            />
+                            <span class="checkbox-tone">Light</span>
+                            <span class="tone-filter-count">
+                                (<span class="tone-count" data-tone="Light"
+                                    >0</span
+                                >)
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="results">
+                    <h4>Results:</h4>
+                    <ul id="results-list" class="results-list">
+                        <!-- Default results, visible by default -->
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red
+                            and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red
+                            and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red
+                            and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue,Green,Red
+                            and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown,Buff,Blue"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown,Buff,Blue and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black,Brown"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black,Brown and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Black"
+                            data-filter_tone="Medium"
+                        >
+                            Grey,Beige,Natural,Black and Medium
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Black,Orange,Charcoal"
+                            data-filter_tone="Dark"
+                        >
+                            Grey,Beige,Black,Orange,Charcoal and Dark
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Black,Orange,Charcoal"
+                            data-filter_tone="Dark"
+                        >
+                            Grey,Beige,Black,Orange,Charcoal and Dark
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Black,Orange,Charcoal"
+                            data-filter_tone="Dark"
+                        >
+                            Grey,Beige,Black,Orange,Charcoal and Dark
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Black,Orange,Charcoal"
+                            data-filter_tone="Dark"
+                        >
+                            Grey,Beige,Black,Orange,Charcoal and Dark
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Cream,White,Yellow,Silver"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,Cream,White,Yellow,Silver and
+                            Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Cream,White,Yellow,Silver"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,Cream,White,Yellow,Silver and
+                            Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Cream,White,Yellow,Silver"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,Cream,White,Yellow,Silver and
+                            Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,Cream,White,Yellow,Silver"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,Cream,White,Yellow,Silver and
+                            Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,White and Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,White and Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,White and Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,Beige,Natural,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,Beige,Natural,White and Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,White and Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,White and Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,White and Light
+                        </li>
+                        <li
+                            class="filter__product-entry ls-product-item has-swatch"
+                            data-filter_colour="Grey,White"
+                            data-filter_tone="Light"
+                        >
+                            Grey,White and Light
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Color and Tone Data
+            const colors = [
+                { name: 'Grey', colorCode: '#808080', paleColor: false },
+                { name: 'Beige', colorCode: '#e5cfb3', paleColor: false },
+                { name: 'Natural', colorCode: '#c4c0b8', paleColor: false },
+                { name: 'Black', colorCode: '#494941', paleColor: false },
+                { name: 'White', colorCode: '#ffffff', paleColor: false },
+                { name: 'Brown', colorCode: '#958c7d', paleColor: true },
+                { name: 'Buff', colorCode: '#cdc1b1', paleColor: false },
+                { name: 'Blue', colorCode: '#7f8eb7', paleColor: false },
+                { name: 'Green', colorCode: '#919a82', paleColor: false },
+                { name: 'Charcoal', colorCode: '#6a6b6b', paleColor: false },
+                { name: 'Yellow', colorCode: '#f5e9b8', paleColor: false },
+                { name: 'Cream', colorCode: '#f9f3ec', paleColor: false },
+                { name: 'Silver', colorCode: '#c6c6c6', paleColor: false },
+                { name: 'Red', colorCode: '#8a4f3c', paleColor: false },
+                { name: 'Orange', colorCode: '#ba6a51', paleColor: false },
+            ];
+
+            const colorOptionsContainer =
+                document.getElementById('color-options');
+            const resultsList = document.getElementById('results-list');
+            const toneCheckboxes = document.querySelectorAll('.tone-checkbox');
+
+            // Render Color Checkboxes
+            function renderColors() {
+                colorOptionsContainer.innerHTML = '';
+                colors.forEach((color) => {
+                    const colorLabel = document.createElement('label');
+                    colorLabel.classList.add('color-item');
+
+                    // Add 'pale-color' class if the color is pale
+                    if (color.paleColor) {
+                        colorLabel.classList.add('pale-color');
+                    }
+
+                    const colorCheckbox = document.createElement('input');
+                    colorCheckbox.type = 'checkbox';
+                    colorCheckbox.classList.add('color-checkbox');
+                    colorCheckbox.dataset.color = color.name;
+
+                    // Make 'Brown' color initially selected
+                    if (color.name === 'Brown') {
+                        colorCheckbox.checked = true;
+                    }
+
+                    const colorCircle = document.createElement('span');
+                    colorCircle.classList.add('color-circle');
+                    colorCircle.style.backgroundColor = color.colorCode;
+
+                    const colorNameSpan = document.createElement('span');
+                    colorNameSpan.classList.add('color-name');
+                    colorNameSpan.textContent = color.name;
+
+                    const colorCountWrapper = document.createElement('span');
+                    const colorCountSpan = document.createElement('span');
+                    colorCountSpan.classList.add('color-count');
+                    colorCountSpan.dataset.color = color.name;
+                    colorCountSpan.textContent = '0';
+
+                    colorCountWrapper.append('(', colorCountSpan, ')');
+
+                    // Append all elements to the label
+                    colorLabel.appendChild(colorCheckbox);
+                    colorLabel.appendChild(colorCircle);
+                    colorLabel.appendChild(colorNameSpan);
+                    colorLabel.appendChild(colorCountWrapper);
+
+                    colorOptionsContainer.appendChild(colorLabel);
+                });
+            }
+
+            // Filter Results and Update Counts
+            function filterAndUpdate() {
+                const selectedColors = Array.from(
+                    document.querySelectorAll('.color-checkbox:checked')
+                ).map((checkbox) => checkbox.dataset.color);
+                const selectedTones = Array.from(
+                    document.querySelectorAll('.tone-checkbox:checked')
+                ).map((checkbox) => checkbox.dataset.tone);
+
+                const colorCounts = {};
+                const toneCounts = { Medium: 0, Dark: 0, Light: 0 };
+                const availableColors = new Set();
+                const availableTones = new Set();
+
+                const resultItems = resultsList.querySelectorAll(
+                    '.filter__product-entry'
+                );
+
+                resultItems.forEach((item) => {
+                    const itemColors = item.dataset.filter_colour.split(',');
+                    const itemTone = item.dataset.filter_tone;
+
+                    const colorMatch =
+                        selectedColors.length === 0 ||
+                        selectedColors.every((color) =>
+                            itemColors.includes(color)
+                        );
+                    const toneMatch =
+                        selectedTones.length === 0 ||
+                        selectedTones.includes(itemTone);
+
+                    const isVisible = colorMatch && toneMatch;
+                    item.style.display = isVisible ? '' : 'none';
+
+                    if (isVisible) {
+                        itemColors.forEach((color) => {
+                            colorCounts[color] = (colorCounts[color] || 0) + 1;
+                            availableColors.add(color);
+                        });
+                        toneCounts[itemTone]++;
+                        availableTones.add(itemTone);
+                    }
+                });
+
+                // Update color and tone counts
+                document
+                    .querySelectorAll('.color-count')
+                    .forEach((countSpan) => {
+                        const color = countSpan.dataset.color;
+                        countSpan.textContent = colorCounts[color] || 0;
+                    });
+
+                document
+                    .querySelectorAll('.tone-count')
+                    .forEach((countSpan) => {
+                        const tone = countSpan.dataset.tone;
+                        countSpan.textContent = toneCounts[tone] || 0;
+                    });
+
+                // Disable unavailable color checkboxes
+                document
+                    .querySelectorAll('.color-checkbox')
+                    .forEach((checkbox) => {
+                        checkbox.disabled = !availableColors.has(
+                            checkbox.dataset.color
+                        );
+                    });
+
+                // Disable unavailable tone checkboxes
+                toneCheckboxes.forEach((checkbox) => {
+                    checkbox.disabled = !availableTones.has(
+                        checkbox.dataset.tone
+                    );
+                });
+            }
+
+            // Initialize color options and add event listeners
+            renderColors();
+
+            // Initial filter to apply the default selected color
+            filterAndUpdate();
+
+            document.addEventListener('change', (event) => {
+                if (
+                    event.target.classList.contains('color-checkbox') ||
+                    event.target.classList.contains('tone-checkbox')
+                ) {
+                    filterAndUpdate();
+                }
+            });
+        </script>
+    </body>
+</html>
